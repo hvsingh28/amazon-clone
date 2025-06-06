@@ -1,0 +1,416 @@
+.body{
+  position: relative;
+}
+.amazon-header {
+  background-color: rgb(19, 25, 33);
+  color: white;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+}
+
+.amazon-header-left-section {
+  width: 340px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 800px) {
+  .amazon-header-left-section {
+    width: unset;
+  }
+}
+
+.header-link {
+  display: inline-block;
+  padding: 6px;
+  border-radius: 2px;
+  cursor: pointer;
+  text-decoration: none;
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.header-link:hover {
+  border: 1px solid white;
+}
+
+.amazon-logo {
+  width: 100px;
+  margin-top: 5px;
+}
+
+.amazon-mobile-logo {
+  display: none;
+}
+
+@media (max-width: 575px) {
+  .amazon-logo {
+    display: none;
+  }
+
+  .amazon-mobile-logo {
+    display: block;
+    height: 35px;
+    margin-top: 5px;
+  }
+  
+}
+
+.amazon-header-middle-section {
+  flex: 1;
+  max-width: 850px;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: flex;
+}
+
+.search-bar {
+  flex: 1;
+  width: 0;
+  font-size: 16px;
+  height: 38px;
+  padding-left: 15px;
+  border: none;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.search-button {
+  background-color: rgb(254, 189, 105);
+  border: none;
+  width: 45px;
+  height: 40px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  flex-shrink: 0;
+}
+
+.search-icon {
+  height: 22px;
+  margin-left: 2px;
+  margin-top: 3px;
+}
+
+.amazon-header-right-section {
+  width: 180px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: end;
+}
+
+.orders-link {
+  color: white;
+}
+
+.returns-text {
+  display: block;
+  font-size: 13px;
+}
+
+.orders-text {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.cart-link {
+  color: white;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.cart-icon {
+  width: 50px;
+}
+
+.cart-text {
+  margin-top: 12px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.cart-quantity {
+  color: rgb(240, 136, 4);
+  font-size: 16px;
+  font-weight: 700;
+
+  position: absolute;
+  top: 4px;
+  left: 22px;
+  
+  width: 26px;
+  text-align: center;
+}
+.location-container{
+  font-size: 1rem;
+}
+.update-location {
+  display: none;
+  box-sizing: border-box;
+  position: fixed;
+  background-color: white;
+  border-radius: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 200;
+  height: min(320px, 90vh);
+  width: min(480px, 90vw);
+  grid-template-rows: 80px 1fr;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.update-location h1 {
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  font-size: clamp(18px, 5vw, 25px);
+}
+
+.update-location-head {
+  display: flex;
+  position: relative;
+  background-color: #f0f2f2;
+  justify-content: start;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  padding-left: 20px;
+  height: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.update-location-head button {
+  position: absolute;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  right: 20px;
+  height: 30px;
+  width: 30px;
+}
+
+.update-location-body {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  column-gap: 5px;
+  padding: 30px 20px;
+  height: 100%;
+  width: 100%;
+}
+
+.update-location-body input {
+  width: min(275px, 100%);
+  height: 45px;
+  border-radius: 10px;
+  padding-left: 20px;
+  box-sizing: border-box;
+  font-size: clamp(16px, 4vw, 22px);
+}
+
+.update-location-body button {
+  width: min(125px, 100%);
+  margin-left: 20px;
+  border-radius: 50px;
+}
+
+.update-location-body p {
+  text-align: center;
+  font-size: clamp(12px, 3vw, 14px);
+}
+
+.update-location-body a {
+  text-decoration: none;
+}
+
+.location-input {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.location-input p {
+  display: block;
+}
+
+.locations {
+  width: 18px;
+  flex-shrink: 0;
+}
+
+.location-container-link {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: clamp(13px, 3vw, 15px);
+}
+.js-apply{
+  height: 45px;
+}
+.js-my-location {
+  margin-left: 27px;
+}
+
+.js-close {
+  background-color: transparent;
+  border: none;
+}
+
+.js-close img {
+  width: 20px;
+}
+
+/* Mobile-first responsive breakpoints */
+@media (max-width: 480px) {
+  .update-location {
+    width: 95vw;
+    height: auto;
+    min-height: 280px;
+    max-height: 85vh;
+  }
+  
+  .update-location-head {
+    padding-left: 15px;
+  }
+  
+  .update-location-head button {
+    right: 15px;
+  }
+  
+  .update-location-body {
+    padding: 20px 15px;
+  }
+  
+  .update-location-body input {
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+  }
+  
+  .update-location-body button {
+    width: 100px;
+    margin-left: 10px;
+  }
+  
+  .location-input {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  
+  .js-my-location {
+    margin-left: 0;
+    margin-top: 10px;
+    font-size: 10px;
+  }
+  .js-location{
+    font-size: 10px;
+  }
+  .locations{
+    display: none;
+  }
+  
+}
+
+@media (max-width: 320px) {
+  .update-location {
+    width: 98vw;
+    min-height: 260px;
+  }
+  
+  .update-location-head {
+    padding-left: 10px;
+  }
+  
+  .update-location-head button {
+    right: 10px;
+    height: 25px;
+    width: 25px;
+  }
+  
+  .update-location-body {
+    padding: 15px 10px;
+  }
+  
+  .update-location-body input {
+    height: 35px;
+    padding-left: 15px;
+  }
+  
+  .update-location-body button {
+    width: 80px;
+    height: 35px;
+    margin-left: 5px;
+  }
+  
+  .locations {
+    width: 16px;
+  }
+  
+  .js-close img {
+    width: 18px;
+  }
+  .js-my-location {
+    margin-left: 0;
+    margin-top: 10px;
+    font-size: 7px;
+  }
+  .js-location{
+    font-size: 7px;
+  }
+  
+}
+
+/* Tablet breakpoint */
+@media (min-width: 481px) and (max-width: 768px) {
+  .update-location {
+    width: 85vw;
+    max-width: 400px;
+  }
+  
+  .update-location-body input {
+    width: min(300px, 100%);
+  }
+  
+  .location-input {
+    justify-content: center;
+  }
+  .js-my-location {
+    margin-left: 0;
+    margin-top: 10px;
+    font-size: 15px;
+  }
+  .js-location{
+    font-size: 15px;
+  }
+}
+
+/* Large desktop breakpoint */
+@media (min-width: 1200px) {
+  .update-location {
+    width: 480px;
+    height: 320px;
+  }
+
+}
